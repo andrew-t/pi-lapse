@@ -1,15 +1,16 @@
 var RaspiCam = require('raspicam');
 
-var camera = new RaspiCam({
-	mode: 'photo',
-	output: 'photos/' + new Date().getTime() + '.jpg',
-	nopreview: true
-});
+var today = new Date(),
+	camera = new RaspiCam({
+		mode: 'photo',
+		output: 'photos/' + today.getFullYear() + '-' +
+			pad(today.getMonth() + 1) + '-' +
+			pad(today.getDate()) + '.jpg',
+		nopreview: true
+	});
 
-camera.on("start", onStart);
 camera.on("started", onStart);
 camera.on("read", onRead);
-camera.on("exit", onExit);
 camera.on("exited", onExit);
 
 if (!camera.start())
@@ -33,3 +34,7 @@ function onExit(timestamp) {
 	console.log('exited');
 	camera.stop();
 };
+
+function pad(n) {
+	return n > 9 ? n.toString() : ('0' + n);
+}
