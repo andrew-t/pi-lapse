@@ -31,4 +31,5 @@ function onRead(err, timestamp, filename) {
 }
 function onExit(timestamp) {
 	console.log('exited');
+	camera.stop();
 };
