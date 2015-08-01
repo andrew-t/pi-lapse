@@ -2,7 +2,8 @@ var RaspiCam = require('raspicam');
 
 var camera = new RaspiCam({
 	mode: 'photo',
-	output: 'photos/' + new Date().getTime() + '.jpg'
+	output: 'photos/' + new Date().getTime() + '.jpg',
+	nopreview: true
 });
 
 camera.on("start", onStart);
