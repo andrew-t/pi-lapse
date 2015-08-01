@@ -9,9 +9,9 @@ var today = new Date(),
 		nopreview: true
 	});
 
-camera.on("started", onStart);
+camera.on("start", onStart);
 camera.on("read", onRead);
-camera.on("exited", onExit);
+camera.on("exit", onExit);
 
 if (!camera.start())
 	console.log('Error!');
