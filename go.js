@@ -5,7 +5,9 @@ var today = new Date(),
 		mode: 'photo',
 		output: 'photos/' + today.getFullYear() + '-' +
 			pad(today.getMonth() + 1) + '-' +
-			pad(today.getDate()) + '.jpg',
+			pad(today.getDate()) + ' ' +
+			pad(today.getHours()) + ':' +
+			pad(today.getMinutes()) + '.jpg',
 		nopreview: true,
 		width: 2592,
 		height: 1944,
