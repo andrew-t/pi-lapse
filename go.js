@@ -3,7 +3,8 @@ var RaspiCam = require('raspicam');
 var today = new Date(),
 	camera = new RaspiCam({
 		mode: 'photo',
-		output: 'photos/' + today.getFullYear() + '-' +
+		output: __dirname + '/photos/' +
+			today.getFullYear() + '-' +
 			pad(today.getMonth() + 1) + '-' +
 			pad(today.getDate()) + ' ' +
 			pad(today.getHours()) + ':' +
