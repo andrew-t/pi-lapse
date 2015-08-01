@@ -1,0 +1,14 @@
+{
+  "name": "pi-lapse",
+  "version": "0.0.0",
+  "description": "",
+  "main": "go.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "raspicam": "^0.2.13"
+  }
+}
